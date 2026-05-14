@@ -14,6 +14,9 @@
 \RequirePackage{array}
 \RequirePackage{booktabs}
 \RequirePackage{setspace}
+\RequirePackage{multirow}
+\RequirePackage{longtable}
+\RequirePackage{float}
 
 % 页面设置
 \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
@@ -92,19 +95,20 @@
         \vspace{1.5cm}
         
        % 信息表格（标签加粗三号宋体，内容加下划线三号宋体）
+        % 信息表格：标签加粗三号宋体，内容为变量且加下划线三号宋体
         \renewcommand{\arraystretch}{1.8}
-        \begin{tabular}{p{3cm} p{8cm}}
-            {\bfseries\zihao{3}\songti 实验：} & {\zihao{3}\songti\underline{\hspace{6cm}}} \\[0.5cm]
-            {\bfseries\zihao{3}\songti 班\quad 级：} & {\zihao{3}\songti\underline{\hspace{6cm}}} \\[0.5cm]
-            {\bfseries\zihao{3}\songti 姓\quad 名：} & {\zihao{3}\songti\underline{\hspace{6cm}}} \\[0.5cm]
-            {\bfseries\zihao{3}\songti 学\quad 号：} & {\zihao{3}\songti\underline{\hspace{6cm}}} \\[0.5cm]
-            {\bfseries\zihao{3}\songti 指导老师：} & {\zihao{3}\songti\underline{\hspace{6cm}}} \\[0.5cm]
+        \begin{tabular}{p{3cm} p{9cm}}
+            {\bfseries\zihao{3}\songti 实\quad 验：} & {\zihao{3}\songti\underline{\@expname}} \\[0.5cm]
+            {\bfseries\zihao{3}\songti 班\quad 级：} & {\zihao{3}\songti\underline{\@classname}} \\[0.5cm]
+            {\bfseries\zihao{3}\songti 姓\quad 名：} & {\zihao{3}\songti\underline{\@stuname}} \\[0.5cm]
+            {\bfseries\zihao{3}\songti 学\quad 号：} & {\zihao{3}\songti\underline{\@stuid}} \\[0.5cm]
+            {\bfseries\zihao{3}\songti 指导老师：} & {\zihao{3}\songti\underline{\@instructor}} \\[0.5cm]
         \end{tabular}
 
         \vspace{1cm}
 
-        % 单独的年、月（无标签）
-        {\zihao{3}\songti \hspace{2cm} 年 \hspace{2cm} 月}
+        % 日期单独一行，显示“年  月”格式（无标签）
+        {\zihao{3}\songti \@expdate\par}
         
         \vfill
         \centering
