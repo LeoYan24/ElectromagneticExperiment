@@ -1,0 +1,63 @@
+% quickstart.tex
+% 电磁场与微波实验报告快速开始（直接填写即可）
+\documentclass{ElectromagneticFieldTemplate}
+
+% ====== 图片路径设置 ======
+% 请将 BUPT 和 badge 两个图片文件（无需扩展名，或实际为 .png/.jpg）放在 ./TemplateFigures/ 目录下
+% 如果图片文件有扩展名（如 .png），请使用 \includegraphics[width=6cm]{BUPT.png}
+\graphicspath{{./TemplateFigures/}}
+
+% ====== 填写实验基本信息 ======
+% 顺序：{实验名称}{班级}{姓名}{学号}{指导老师}{日期}
+\setExperimentInfo
+    {（请填写实验名称）}   % 例如：电磁波反射与折射实验
+    {（请填写班级）}       % 例如：班
+    {（请填写姓名）}       % 例如：张三
+    {（请填写学号）}       % 例如：202411001
+    {（请填写指导老师）}   % 例如：李老师
+    {\today}              % 自动生成当前日期，也可手动写“2026年5月”
+
+\begin{document}
+
+% 生成封面（包含页眉）
+\maketitle
+
+% ========== 以下为正文，章节序号自动为“一、二、…” ==========
+
+\section{实验目的}
+% 在此编写实验目的
+
+\section{实验原理与说明}
+% 原理部分，可使用数学公式，例如：$E = mc^2$
+
+\section{实验设备}
+% 列出仪器
+
+\section{实验内容}
+% 概述任务
+
+\section{实验步骤}
+% 详细步骤
+
+\section{实验数据}
+% 表格示例：
+% \begin{table}[h]
+% \centering
+% \caption{测量数据}
+% \begin{tabular}{ccc}
+% \toprule
+% 次数 & 电压 (V) & 电流 (A) \\
+% \midrule
+% 1 & 0.5 & 0.02 \\
+% 2 & 1.0 & 0.04 \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+
+\section{实验结果整理及误差分析}
+% 数据处理与误差讨论
+
+\section{思考题}
+% 回答思考题
+
+\end{document}
