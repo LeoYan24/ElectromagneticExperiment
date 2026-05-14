@@ -34,6 +34,22 @@
     {\Large\bfseries\heiti\raggedright}
     {\thesection、}{0em}{}
 \titlespacing*{\section}{0pt}{20pt}{10pt}
+% 重新定义 subsection 编号：阿拉伯数字，如 1.1
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+% 重新定义 subsubsection 编号：阿拉伯数字，如 1.1.1
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+% 可选：调整 subsection 标题格式（左对齐、黑体、四号）
+\titleformat{\subsection}
+    {\normalfont\bfseries\zihao{4}\heiti\raggedright}
+    {\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{15pt}{5pt}
+
+% 可选：调整 subsubsection 标题格式（左对齐、黑体、小四）
+\titleformat{\subsubsection}
+    {\normalfont\bfseries\zihao{-4}\heiti\raggedright}
+    {\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{12pt}{3pt}
 
 % 图片默认路径（请将图片放入 TemplateFigures 文件夹）
 \graphicspath{{./TemplateFigures/}}
