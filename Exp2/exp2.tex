@@ -1,0 +1,160 @@
+% quickstart.tex
+% 电磁场与微波实验报告快速开始
+% 请将本文件的内容复制到所要编写的实验报告，不要直接改动、编译此文件！
+\documentclass{../ElectromagneticFieldTemplate}
+
+% ====== 图片路径设置 ======
+% 请将 BUPT 和 badge 两个图片文件（无需扩展名，或实际为 .png/.jpg）放在 ./TemplateFigures/ 目录下
+% 如果图片文件有扩展名（如 .png），请使用 \includegraphics[width=6cm]{BUPT.png}
+\graphicspath{{./Figures/}{../TemplateFigures/}}
+
+% ====== 填写实验基本信息 ======
+% 顺序：{实验名称}{班级}{姓名}{学号}{指导老师}{日期}
+\setExperimentInfo
+    {均匀无耗媒质参量的测量}
+    {2024217802}
+    {严子竣}
+    {2024212622}
+    {张璇}
+    {\today}              % 自动生成当前日期，也可手动写“2026年5月”
+
+\begin{document}
+
+% 生成封面（包含页眉）
+\maketitle
+
+% ========== 以下为正文，章节序号自动为“一、二、…” ==========
+
+\section{实验目的}
+
+\begin{enumerate}
+    \item 应用相干波节点位移法，研究均匀无损耗媒质参量 \(\varepsilon_r\) 的测试方法。
+    \item 了解均匀无损耗媒质中电磁波参量 \(\lambda\)、\(\beta\)、\(\nu\) 与自由空间内电磁波参量 \(\lambda_0\)、\(\beta_0\)、\(c\) 的差别。
+    \item 熟悉均匀无损耗媒质分界面对电磁波的反射和折射特性。
+\end{enumerate}
+
+\section{实验原理与说明}
+
+本实验利用相干波节点位移法测定均匀无损耗媒质的相对介电常数 \(\varepsilon_r\)。
+
+在自由空间中，移动金属反射板 \(P_{r2}\) 可使接收喇叭 \(P_{r3}\) 处出现相干波极小值（零指示）。当在 \(P_{r2}\) 表面紧贴厚度为 \(\delta\) 的待测介质板后，电磁波往返穿过介质板产生附加相位滞后，破坏了原有的极小值条件。为恢复极小值指示，需将 \(P_{r2}\) 连同介质板向前推进 \(\Delta L\)，以空气路径的相位变化补偿介质板引入的相位滞后。
+
+根据相位补偿关系，可导出相对介电常数的计算公式：
+
+\[
+\varepsilon_r = \left(1 + \frac{\Delta L}{\delta}\right)^2
+\]
+
+其中，\(\Delta L\) 为有无介质板时对应节点的位移差，\(\delta\) 为介质板厚度。测得 \(\varepsilon_r\) 后，可进一步计算介质中的波长 \(\lambda = \lambda_0 / \sqrt{\varepsilon_r}\)、相位常数 \(\beta = \beta_0 \sqrt{\varepsilon_r}\)、波速 \(\nu = c / \sqrt{\varepsilon_r}\)，以及分界面上的反射系数 \(R\) 和折射系数 \(T\)。
+
+\section{实验设备}
+
+\begin{itemize}
+    \item 电磁波综合测试仪（含发射喇叭、接收喇叭、示波器等）
+    \item 铝板（固定板、可动板） 2 块
+    \item 有机玻璃板（透明介质板） 1 块
+    \item 被测介质板（\(30\,\text{cm} \times 30\,\text{cm}\) 黄色介质板） 1 块
+    \item 塑料夹子 4 个
+    \item 游标卡尺 1 个
+\end{itemize}
+
+\section{实验内容}
+
+\begin{enumerate}
+    \item 用卡尺在 \(\varepsilon_r\) 板（\(30\,\text{cm} \times 30\,\text{cm}\) 黄色介质板）的四周测量其厚度，并取平均值 \(\delta\)。
+    \item 根据相干波节点位移法原理，分别测出没有 \(\varepsilon_r\) 板时的所有节点位置 \(L\) 及有 \(\varepsilon_r\) 板时对应的所有节点位置 \(L'\)，计算对应节点的差值 \(\Delta L\)，并求其平均值。
+    \item 将测试值列入数据表，并根据相应关系式计算被测介质板的 \(\varepsilon_r\) 值、介质中的电磁波参量 \(\lambda\)、\(\beta\)、\(\nu\) 及分界面上的反射系数 \(R\)、折射系数 \(T\)。
+\end{enumerate}
+
+\section{实验步骤}
+
+\begin{enumerate}
+    \item 整体机械初始化调整同实验一，并使用游标卡尺测量 \(\varepsilon_r\) 板的平均厚度 \(\delta\)。
+    \item 按照实验装置示意图安装反射铝板 \(P_{r1}\)、\(P_{r2}\) 及有机玻璃板。固定 \(P_{r1}\)，移动 \(P_{r2}\)，使 \(P_{r3}\) 示波器指示为极小值，记录不加介质板时所有极小值对应的节点位置 \(L\)。
+    \item 将厚度为 \(\delta\) 的待测介质板紧贴 \(P_{r2}\) 表面放置，并用夹子夹紧。此时 \(P_{r2}\) 仍处于波节点 \(L\) 位置，但 \(P_{r3}\) 指示不再为极小值。
+    \item 利用螺旋测微器将 \(P_{r2}\) 连同介质板一起移动，使 \(P_{r3}\) 再次指示极小值，记录此时的位置 \(L'\)，得到 \(\Delta L = |L - L'|\)。
+    \item 重复上述步骤，测量所有节点对应的 \(\Delta L\)，取平均值，代入公式计算 \(\varepsilon_r\)、\(\lambda\)、\(\beta\)、\(\nu\)、\(R\)、\(T\) 的值。
+\end{enumerate}
+
+\section{实验数据}
+
+被测介质板厚度测量值：\(\delta = 5.00\,\text{mm}\)（注：实际实验中需用游标卡尺测量并取平均值，此处为典型值）。
+
+\begin{table}[H]
+    \centering
+    \caption{媒质参量测试数据表}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        节点序号 & 无介质时位置 \(L\) (mm) & 有介质时位置 \(L'\) (mm) & 位移差 \(\Delta L = |L - L'|\) (mm) \\
+        \hline
+        1 & 65.75 & 59.24 & 6.51 \\
+        \hline
+        2 & 47.06 & 43.78 & 3.28 \\
+        \hline
+        3 & 34.77 & 29.83 & 4.94 \\
+        \hline
+        4 & 19.82 & 16.80 & 3.02 \\
+        \hline
+        \multicolumn{3}{|c|}{平均位移差 \(\overline{\Delta L}\)} & 4.4375 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+已知信号源中心频率 \(f_0 = 10.2\,\text{GHz}\)，自由空间波长 \(\lambda_0 = \dfrac{c}{f_0} = \dfrac{3 \times 10^8}{10.2 \times 10^9} \approx 29.41\,\text{mm}\)。
+
+\section{实验结果整理及误差分析}
+
+\subsection{实验结果计算}
+
+根据实验数据，平均位移差 \(\overline{\Delta L} = 4.4375\,\text{mm}\)，介质板厚度 \(\delta = 5.00\,\text{mm}\)。
+
+\begin{enumerate}
+    \item 相对介电常数：
+    \[
+    \varepsilon_r = \left(1 + \frac{\overline{\Delta L}}{\delta}\right)^2 = \left(1 + \frac{4.4375}{5.00}\right)^2 = (1 + 0.8875)^2 = 1.8875^2 \approx 3.56
+    \]
+
+    \item 介质中的波长：
+    \[
+    \lambda = \frac{\lambda_0}{\sqrt{\varepsilon_r}} = \frac{29.41}{\sqrt{3.56}} \approx \frac{29.41}{1.8875} \approx 15.58\,\text{mm}
+    \]
+
+    \item 介质中的相位常数：
+    \[
+    \beta = \beta_0 \sqrt{\varepsilon_r} = \frac{2\pi}{\lambda_0} \sqrt{\varepsilon_r} = \frac{2\pi}{0.02941} \times 1.8875 \approx 403.3\,\text{rad/m}
+    \]
+
+    \item 介质中的波速：
+    \[
+    \nu = \frac{c}{\sqrt{\varepsilon_r}} = \frac{3 \times 10^8}{1.8875} \approx 1.589 \times 10^8\,\text{m/s}
+    \]
+
+    \item 反射系数（空气→介质垂直入射）：
+    \[
+    R = \frac{1 - \sqrt{\varepsilon_r}}{1 + \sqrt{\varepsilon_r}} = \frac{1 - 1.8875}{1 + 1.8875} = \frac{-0.8875}{2.8875} \approx -0.307
+    \]
+
+    \item 折射系数（空气→介质垂直入射）：
+    \[
+    T = \frac{2}{1 + \sqrt{\varepsilon_r}} = \frac{2}{2.8875} \approx 0.693
+    \]
+\end{enumerate}
+
+\subsection{误差分析}
+
+\begin{enumerate}
+    \item \textbf{测量误差：} 节点位置的读数由螺旋测微器完成，最小刻度为 \(0.01\,\text{mm}\)，读数存在人为判断误差和回程误差。极小值点附近信号变化平缓，导致位置判定存在一定偏差。
+    \item \textbf{系统误差：} 实验装置中，电磁波并非理想的平面波，喇叭辐射场近区存在感应场分量，使得各节点间距不完全相等，采用多点平均可在一定程度上减小该误差。
+    \item \textbf{介质板厚度测量误差：} 介质板厚度 \(\delta\) 的测量精度直接影响 \(\varepsilon_r\) 的计算结果，应多次测量取平均值。
+    \item \textbf{频率漂移：} 信号源中心频率 \(f_0 = 10.2\,\text{GHz}\) 可能存在微小漂移，导致实际波长与理论值有差异。
+    \item \textbf{环境因素：} 实验室环境温度和湿度变化会影响电磁波的传播特性，引入微小误差。
+\end{enumerate}
+
+\section{思考题}
+
+\textbf{1. 本实验内容用 \(\mu_r = 1\) 测试均匀无损耗媒质 \(\varepsilon_r\) 值，可否测 \(\mu_r \neq 1\) 的磁介质？试说明原因。}
+
+答：不可以。本实验本质上是通过测量波阻抗间接测量相对介电常数，无法独立测出\(\mu_r\)与\(\epsilon_r\).
+
+\end{document}

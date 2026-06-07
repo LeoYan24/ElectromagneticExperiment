@@ -2,7 +2,7 @@
 % 电磁场与微波实验报告模板（最终版，符合所有要求）
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ElectromagneticFieldTemplate}[2026/05/14 电磁场与微波实验报告模板]
-
+\raggedbottom
 \LoadClass[UTF8,a4paper,12pt]{ctexart}
 
 % 必用宏包
@@ -14,14 +14,18 @@
 \RequirePackage{array}
 \RequirePackage{booktabs}
 \RequirePackage{setspace}
+\RequirePackage{indentfirst}
 \RequirePackage{multirow}
 \RequirePackage{longtable}
+\setlength{\LTpre}{0pt plus 0.1pt}
+\setlength{\LTpost}{0pt plus 0.1pt}
 \RequirePackage{float}
 
 % 页面设置
 \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 \renewcommand{\baselinestretch}{1.25}
 \setlength{\headheight}{14pt}
+\setlength{\parskip}{0pt plus 0.1pt}
 
 % 页眉设置（宋体）
 \pagestyle{fancy}
@@ -110,7 +114,7 @@
         % 日期单独一行，显示“年  月”格式（无标签）
         {\zihao{3}\songti \@expdate\par}
         
-        \vfill
+        \vspace{1cm}
         \centering
         \zihao{5}\songti 北京邮电大学 \hspace{1cm} 电子工程学院
         \vspace{1cm}
