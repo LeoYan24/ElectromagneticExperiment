@@ -17,6 +17,9 @@
 \RequirePackage{indentfirst}
 \RequirePackage{multirow}
 \RequirePackage{longtable}
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\RequirePackage{minted}%插入MATLAB代码
 \setlength{\LTpre}{0pt plus 0.1pt}
 \setlength{\LTpost}{0pt plus 0.1pt}
 \RequirePackage{float}
